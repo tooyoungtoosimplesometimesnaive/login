@@ -6,6 +6,10 @@ usernameInput.oninput = function(Event) {
 	console.log(usernameInput.value)
 }
 
+usernameInput.onfocus = function() {
+	console.log("username focused");
+}
+
 passwordInput.onfocus = function() {
 	console.log("password focused");
 }
