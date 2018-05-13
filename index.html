@@ -8,10 +8,27 @@
 <body>
 
 	<div class="container">
-		<div class="container-avatar"></div>
+		<div class="container-avatar">
+			<svg width="300px" height="300px" viewBox="0 0 300 300">
+				<g fill="none" stroke="#000" stroke-width="5">
+				<path d="M 0 300 Q 10 240 60 180 L 60 50 L 120 150 Q 170 120 210 150 L 290 60 L 270 190 Q 290 230 300 300 "/>
+				<circle cx="100" cy="200" r="35" />
+				<circle cx="200" cy="200" r="35" />
+				<circle id="left-eye" fill="#000" cx="100" cy="200" r="4" />
+				<circle id="right-eye" fill="#000" cx="200" cy="200" r="4" />
+				</g>
+				<g fill="white" stroke="#000" stroke-width="5">
+				<path id="left-paw" class="left-paw" d="M 40 300 Q 30 180 80 50 L 90 70 L 100 50 L 110 70 L 130 50 L 140 70 L 160 60 Q 160 190 120 300 "/>
+				<path id="right-paw" class="right-paw" d="M 130 300 Q 80 200 80 70 L 100 70 L 100 50 L 120 60 L 120 40 L 140 60 L 150 40 Q 210 160 230 300 "/>
+				</g>
+			</svg>
+		</div>
 		<div class="container-login">
 			<input id="username" tabindex="1" type="text" class="container-login-input" />
 			<input id="password" tabindex="2" type="password" class="container-login-input" />
+		</div>
+		<div class="container-submit">
+			<input id="submit" tabindex="3" type="button" value="Submit" class="container-submit-button" />
 		</div>
 	</div>
 	<script src="index.js"></script>

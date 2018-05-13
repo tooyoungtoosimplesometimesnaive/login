@@ -13,9 +13,7 @@
 	margin-left: auto;
 	width: 300px;
 	height: 300px;
-	border-radius: 60px;
-	background-color: red;
-
+	border-radius: 30px;
 }
 
 .container-login {
@@ -31,6 +29,14 @@
 	margin-bottom: 20px;
 }
 
+.container-submit {}
+.container-submit-button {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 input[type="text"]
 {
@@ -41,3 +47,73 @@ input[type="password"]
 {
 	font-size:30px;
 }
+
+@keyframes eye-on-focus-animation {
+	0% {
+		transform: none;
+	}
+	100% {
+		transform: translate(-20px, 20px);
+	}
+}
+
+.eye-on-focus {
+	animation: eye-on-focus-animation 0.5s 0s 1 alternate cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes left-paw-up-animation {
+	0% {
+		transform: translate(-12px, 300px);
+	}
+	100% {
+		transform: translate(-12px, 115px);
+	}
+}
+
+@keyframes left-paw-down-animation {
+	0% {
+		transform: translate(-12px, 115px);
+	}
+	100% {
+		transform: translate(-12px, 300px);
+	}
+}
+.left-paw {
+	transform: translate(-10px,300px);
+}
+
+.left-paw-up {
+	animation: left-paw-up-animation 0.5s 0s 1 alternate cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.left-paw-down {
+	animation: left-paw-down-animation 0.5s 0s 1 alternate cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes right-paw-up-animation {
+	0% {
+		transform: translate(80px, 300px);
+	}
+	100% {
+		transform: translate(80px, 120px);
+	}
+}
+
+@keyframes right-paw-down-animation {
+	0% {
+		transform: translate(80px, 120px);
+	}
+	100% {
+		transform: translate(80px, 300px);
+	}
+}
+.right-paw {
+	transform: translate(20px,300px);
+}
+
+.right-paw-up {
+	animation: right-paw-up-animation 0.5s 0s 1 alternate cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.right-paw-down {
+	animation: right-paw-down-animation 0.5s 0s 1 alternate cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
