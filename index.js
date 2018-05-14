@@ -17,6 +17,9 @@ function rotateEyes(username) {
 	var inputLen = username.length;
 
 	var deg = inputLen / LENGTH * 90;
+	if (deg >= 120) {
+		deg = 120;
+	}
 	leftEye.classList.remove("eye-on-focus");
 	leftEye.style.transformOrigin = "100px 200px";
 	leftEye.style.transform = 'rotate(-' + deg + 'deg) translate(-20px, 20px)';
