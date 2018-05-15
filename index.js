@@ -5,6 +5,9 @@ var passwordInput = document.getElementById('password');
 var leftEye = document.getElementById('left-eye');
 var rightEye = document.getElementById('right-eye');
 
+var leftOuterEye = document.getElementById('left-outer-eye');
+var rightOuterEye = document.getElementById('right-outer-eye');
+
 var leftPaw = document.getElementById('left-paw');
 var rightPaw = document.getElementById('right-paw');
 
@@ -34,19 +37,22 @@ usernameInput.oninput = function(Event) {
 
 usernameInput.onfocus = function() {
 	if (usernameInput.value) {
-
 		console.log('something')
 		rotateEyes(usernameInput.value)
 	}
 	else {
 		leftEye.classList.add("eye-on-focus");
 		rightEye.classList.add("eye-on-focus");
+		leftOuterEye.classList.add("eye-scale-left");
+		rightOuterEye.classList.add("eye-scale-right");
 	}
 }
 
 usernameInput.onblur = function() {
 	leftEye.classList.remove("eye-on-focus");
 	rightEye.classList.remove("eye-on-focus");
+	leftOuterEye.classList.remove("eye-scale-left");
+	rightOuterEye.classList.remove("eye-scale-right");
 	leftEye.style.transform = 'none';
 	rightEye.style.transform = 'none';
 }
